@@ -1,12 +1,9 @@
 package com.BriteERP.utilities;
 
 import com.BriteERP.pages.CRMPages;
-import com.BriteERP.pages.LoginPage;
 import com.github.javafaker.Faker;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-
-import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
 
@@ -64,11 +61,8 @@ public class BRPUtils {
 
     public static void deleteOpportunities() {
         CRMPages crmPages = new CRMPages();
-        // BrowserUtils.waitForClickablility(crmPages.list,5).click();
-
         while (checkAmmount() > 5) {
 
-            //BrowserUtils.waitFor(2);
             Driver.get().findElement(By.xpath("(//input[@type='checkbox'])[4]")).click();
             crmPages.actions.click();
             BrowserUtils.waitForClickablility(crmPages.deleteActions, 2).click();
@@ -86,7 +80,7 @@ public class BRPUtils {
     }
 
 
-public static double getSum(){
+    public static double getSum(){
 int row=2;
     double total =0;
 List<WebElement> sizeTable=Driver.get().findElements(By.xpath("//table[contains(@class,'table-hover table-condensed table')]/tbody/tr"));
@@ -96,11 +90,9 @@ row++;
 String getRevenue=revenue.getText();
 total+=Double.parseDouble(getRevenue);
 
-
-
-}
-return total;
-}
+      }
+        return total;
+      }
 
 }
 
