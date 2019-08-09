@@ -4,6 +4,8 @@ import com.BriteERP.pages.CRMPages;
 import com.github.javafaker.Faker;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+
+import javax.sql.rowset.BaseRowSet;
 import java.util.List;
 import java.util.Random;
 
@@ -64,8 +66,10 @@ public class BRPUtils {
         while (checkAmmount() > 5) {
 
             Driver.get().findElement(By.xpath("(//input[@type='checkbox'])[4]")).click();
-            crmPages.actions.click();
-            BrowserUtils.waitForClickablility(crmPages.deleteActions, 2).click();
+            BrowserUtils.waitForClickablility(crmPages.actions,3).click();
+            BrowserUtils.waitFor(2);
+            BrowserUtils.waitForClickablility(crmPages.deleteActions, 3).click();
+            BrowserUtils.waitFor(3);
             Driver.get().findElement(By.xpath("//span[contains(text(),'Ok')]")).click();
             BrowserUtils.waitFor(2);
 

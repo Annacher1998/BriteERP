@@ -46,7 +46,8 @@ public class CRMPages {
 
     @FindBy(xpath = "//table[contains(@class,'table-hover table-condensed table')]/tbody/tr[3]/td[2]")
     public WebElement secondExpectedRevenuePivot;
-@FindBy(xpath = "//table[contains(@class,'o_list_view table table-condensed table-striped o_list')]/tbody/tr[4]/td[9]")
+@FindBy(xpath = "//table[contains(@class,'o_list_view table table-condensed table-striped o_list')]/tbody/tr[5]/td[9]")
+
     public WebElement secondExpectedRevenueList;
 
 

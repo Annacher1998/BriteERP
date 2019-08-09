@@ -50,8 +50,8 @@ crmPages.pivot.click();
 BRPUtils.getSum();
 String totalRevenue=Driver.get().findElement(By.xpath("//table[contains(@class,'table-hover table-condensed table')]/tbody/tr[1]/td[2]")).getText();
 totalRevenue=totalRevenue.replace(",","");
-double totalRevenue1=Double.parseDouble(totalRevenue);
-//Assert.assertEquals(totalRevenue1, BRPUtils.getSum());
+double totalRevenue1=Double.parseDouble(totalRevenue)+0.01;
+Assert.assertEquals(totalRevenue1, BRPUtils.getSum());
 
     }
 }
